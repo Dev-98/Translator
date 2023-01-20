@@ -6,7 +6,7 @@ import googletrans
 # Building a frame for the interface of transaltor
 dev=Tk()
 dev.title('Translator(nakli)')
-dev.geometry("800x300")
+dev.geometry("800x400")
 
 # Extracting languages
 language = googletrans.LANGUAGES
