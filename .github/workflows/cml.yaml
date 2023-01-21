@@ -1,13 +1,15 @@
-name: CML
+name: experiment
 on: [push]
 jobs:
-  train-and-report:
-    runs-on: ubuntu-latest
+  run:
+    runs-on: [ubuntu-latest]
     container: docker://ghcr.io/iterative/cml:0-dvc2-base1
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          pip install -r requirements.txt
-
-      - env:
+      - name: cml-run
+        env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # workflow
+          pip install -r requirements.txt
+          python Translator.py          
