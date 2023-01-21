@@ -5,7 +5,7 @@ import googletrans
 
 # Building a frame for the interface of transaltor
 dev=Tk()
-dev.title('Translator(nakli)')
+dev.title('Translator(Experimental)')
 dev.geometry("800x400")
 
 # Extracting languages
@@ -23,7 +23,7 @@ def translate():
 
     var1.set(trans)
 
-choices = {"English","Hindi",'Gujarati','Spanish','German',"Chinese",'korean','Japanese'}
+choices = {"English","Hindi",'Gujarati','Spanish','German',"Chinese",'Korean','Japanese'}
 
 choice1.set('English')
 choice2.set('Hindi')
